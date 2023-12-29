@@ -18,7 +18,7 @@ Highly customizable org chart built with d3 v7.
 
 Various tests regarding layout.
 
-### Quick Docs
+## Quick Docs
 
 Check the sample data here - https://github.com/bumbeishvili/sample-data/blob/main/data-oracle.csv
 
