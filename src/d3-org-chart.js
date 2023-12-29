@@ -140,7 +140,7 @@ export class OrgChart {
                         </svg></span><span style="margin-left:1px;color:#716E7B">${node.data._directSubordinatesPaging} </span></div>
                     `,
                 }
-                return `<div style="border:1px solid #E4E2E9;border-radius:3px;padding:3px;font-size:9px;margin:auto auto;background-color:white"> ${icons[state.layout](node.children)}  </div>`
+                return `<div style="user-select:none;border:1px solid #E4E2E9;border-radius:3px;padding:3px;font-size:9px;margin:auto auto;background-color:white"> ${icons[state.layout](node.children)}  </div>`
             },
             /* Node paging button content and styling. You can access same helper methods as above. */
             pagingButton: (d, i, arr, state) => {
