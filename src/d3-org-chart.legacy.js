@@ -30,7 +30,15 @@
     (factory((global.d3 = global.d3 || {}), global.d3, global.d3, global.d3, global.d3, global.d3, global.d3));
 }(this, (function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
 
-    console.log("D3OC");
+    console.log("D3OC - BEGIN");
+    console.log("d3: ", d3);
+    console.log("d3Selection: ", d3Selection);
+    console.log("d3Array: ", d3Array);
+    console.log("d3Hierarchy: ", d3Hierarchy);
+    console.log("d3Zoom: ", d3Zoom);
+    console.log("d3Shape: ", d3Shape);
+    console.log("d3Flextree: ", d3Flextree);
+    console.log("D3OC - END");
                                                                                              
     const d3 = {
         selection: d3Selection.selection,
