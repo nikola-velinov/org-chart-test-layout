@@ -598,7 +598,7 @@
     
             //****************** ROOT node work ************************
     
-            attrs.flexTreeLayout = d3.flextree.flextree({
+            attrs.flexTreeLayout = d3.flextree({
                 nodeSize: node => {
                     const width = attrs.nodeWidth(node);;
                     const height = attrs.nodeHeight(node);
