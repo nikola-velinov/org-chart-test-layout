@@ -24,6 +24,8 @@
  *
  */
 
+console.log("D3OC - PRE");
+
 (function (global, factory) {
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-array'), require('d3-hierarchy'), require('d3-zoom'), require('d3-flextree'), require('d3-shape')) :
     typeof define === 'function' && define.amd ? define(['exports', 'd3-selection', 'd3-array', 'd3-hierarchy', 'd3-zoom', 'd3-flextree', 'd3-shape'], factory) :
