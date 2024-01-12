@@ -534,9 +534,9 @@
             if (!attrs.data || attrs.data.length == 0) {
                 console.log('ORG CHART - Data is empty');
                 if (attrs.container) {
-                    d3Selection.select(attrs.container).select('.nodes-wrapper').remove();
-                    d3Selection.select(attrs.container).select('.links-wrapper').remove();
-                    d3Selection.select(attrs.container).select('.connections-wrapper').remove();
+                    d3.selection.select(attrs.container).select('.nodes-wrapper').remove();
+                    d3.selection.select(attrs.container).select('.links-wrapper').remove();
+                    d3.selection.select(attrs.container).select('.connections-wrapper').remove();
                 }
                 return this;
             }
@@ -579,7 +579,7 @@
     
             //****************** ROOT node work ************************
     
-            attrs.flexTreeLayout = d3Flextree.flextree({
+            attrs.flexTreeLayout = d3.flextree.flextree({
                 nodeSize: node => {
                     const width = attrs.nodeWidth(node);;
                     const height = attrs.nodeHeight(node);
