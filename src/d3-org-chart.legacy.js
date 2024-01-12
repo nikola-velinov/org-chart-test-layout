@@ -30,6 +30,8 @@
     (factory((global.d3 = global.d3 || {}), global.d3, global.d3, global.d3, global.d3, global.d3, global.d3));
 }(this, (function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
 
+    console.log("D3OC");
+                                                                                             
     const d3 = {
         selection: d3Selection.selection,
         select: d3Selection.select,
