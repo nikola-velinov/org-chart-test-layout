@@ -31,18 +31,18 @@
 }(this, function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
 
     const d3 = {
-        selection,
-        select,
-        max,
-        min,
-        sum,
-        cumsum,
-        tree,
-        stratify,
-        zoom,
-        zoomIdentity,
-        linkHorizontal,
-        flextree
+        selection: d3Selection.selection,
+        select: d3Selection.select,
+        max: d3Array.max,
+        min: d3Array.min,
+        sum: d3Array.sum,
+        cumsum: d3Array.cumsum,
+        tree: d3Hierarchy.tree,
+        stratify: d3Hierarchy.stratify,
+        zoom: d3Zoom.zoom,
+        zoomIdentity: d3Zoom.zoomIdentity,
+        linkHorizontal: d3Shape.linkHorizontal,
+        flextree: d3Flextree.flextree
     }
     
     class OrgChart {
