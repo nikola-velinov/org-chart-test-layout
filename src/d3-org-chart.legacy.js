@@ -1935,6 +1935,6 @@
 
     exports.OrgChart = OrgChart;
 
-    Object.defineProperty(exports, '__esModule', { value: true });
+    //Object.defineProperty(exports, '__esModule', { value: true });
 
 }));
