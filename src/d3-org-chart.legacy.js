@@ -24,8 +24,27 @@
  *
  */
 
-!function(t,e){"object"==typeof exports&&"undefined"!=typeof module?e(exports,require("d3-selection"),require("d3-array"),require("d3-hierarchy"),require("d3-zoom"),require("d3-flextree"),require("d3-shape")):"function"==typeof define&&define.amd?define(["exports","d3-selection","d3-array","d3-hierarchy","d3-zoom","d3-flextree","d3-shape"],e):e(t.d3=t.d3||{},t.d3,t.d3,t.d3,t.d3,t.d3,t.d3)}(this,function(t,n,e,a,i,r,o){"use strict";const d3={selection:n.selection,select:n.select,max:e.max,min:e.min,sum:e.sum,cumsum:e.cumsum,tree:a.tree,stratify:a.stratify,zoom:i.zoom,zoomIdentity:i.zoomIdentity,linkHorizontal:o.linkHorizontal,flextree:r.flextree};
+(function (global, factory) {
+    typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-array'), require('d3-hierarchy'), require('d3-zoom'), require('d3-flextree'), require('d3-shape')) :
+    typeof define === 'function' && define.amd ? define(['exports', 'd3-selection', 'd3-array', 'd3-hierarchy', 'd3-zoom', 'd3-flextree', 'd3-shape'], factory) :
+    (factory((global.external_d3 = global.external_d3 || {}), global.external_d3, global.external_d3, global.external_d3, global.external_d3, global.external_d3, global.external_d3));
+}(this, function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
 
+    const d3 = {
+        selection: d3Selection.selection,
+        select: d3Selection.select,
+        max: d3Array.max,
+        min: d3Array.min,
+        sum: d3Array.sum,
+        cumsum: d3Array.cumsum,
+        tree: d3Hierarchy.tree,
+        stratify: d3Hierarchy.stratify,
+        zoom: d3Zoom.zoom,
+        zoomIdentity: d3Zoom.zoomIdentity,
+        linkHorizontal: d3Shape.linkHorizontal,
+        flextree: d3Flextree.flextree
+    }
+                                                                                            
     class OrgChart {
         constructor() {
     
@@ -166,7 +185,7 @@
                 },
                 /* You can access and modify actual node DOM element in runtime using this method. */
                 nodeUpdate: function (d, i, arr) {
-                    d3.select(this)
+                    ct(this)
                         .select('.node-rect')
                         .attr("stroke", d => d.data._highlighted || d.data._upToTheRootHighlighted ? '#E27396' : 'none')
                         .attr("stroke-width", d.data._highlighted || d.data._upToTheRootHighlighted ? 10 : 1)
@@ -175,7 +194,7 @@
                 nodeExit: (d) => d, // Custom handling of exit node
                 /* You can access and modify actual link DOM element in runtime using this method. */
                 linkUpdate: function (d, i, arr) {
-                    d3.select(this)
+                    ct(this)
                         .attr("stroke", d => d.data._upToTheRootHighlighted ? '#E27396' : '#E4E2E9')
                         .attr("stroke-width", d => d.data._upToTheRootHighlighted ? 5 : 1)
     
@@ -1914,8 +1933,8 @@
         }
     }
 
-    t.OrgChart = OrgChart;
+    exports.OrgChart = OrgChart;
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-});
+}));
