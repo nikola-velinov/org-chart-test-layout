@@ -28,7 +28,7 @@
     typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('d3-selection'), require('d3-array'), require('d3-hierarchy'), require('d3-zoom'), require('d3-flextree'), require('d3-shape')) :
     typeof define === 'function' && define.amd ? define(['exports', 'd3-selection', 'd3-array', 'd3-hierarchy', 'd3-zoom', 'd3-flextree', 'd3-shape'], factory) :
     (factory((global.external_d3 = global.external_d3 || {}), global.external_d3, global.external_d3, global.external_d3, global.external_d3, global.external_d3, global.external_d3));
-}(this, function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
+}(this, (function (exports, d3Selection, d3Array, d3Hierarchy, d3Zoom, d3Flextree, d3Shape) { 'use strict';
 
     const d3 = {
         selection: d3Selection.selection,
@@ -1937,4 +1937,4 @@
 
     Object.defineProperty(exports, '__esModule', { value: true });
 
-}));
+})));
